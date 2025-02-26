@@ -1,5 +1,217 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--main-font);
+  position: relative;
+  background-image: var(--cover-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--cover-color);
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
+  padding: var(--padding-standard);
+  block-size: max(100vh, 668px);
+  margin-block-end: 40px;
+}
+
+.header__theme-menu {
+  display: block;
+  justify-self: end;
+  align-self: center;
+  grid-row: 1;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  font-size: var(--font-size-normal);
+}
+
+.header__theme-menu-button {
+  font-size: inherit;
+  background-color: transparent;
+  font-weight: var(--font-weight-normal);
+  color: var(--accent-color);
+  text-transform: lowercase;
+  border: 1px solid transparent;
+  padding: 2px 13px 4px;
+  line-height: 18px;
+  transition: all 0.3s ease-in;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+.header__title {
+  justify-self: start;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--accent-title-color);
+  color: var(--title-color);
+  line-height: 95.7px;
+  grid-row: 2;
+}
+
+.header__text-decor {
+  justify-self: end;
+  align-self: center;
+  background-color: var(--accent-title-color);
+  color: var(--main-color);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height);
+  grid-row: 3;
+  inline-size: min(100%, 364px);
+}
+
+.header__element::before {
+  content: "REC";
+  position: absolute;
+  font-size: inherit;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+  top: var(--header-element-top);
+  right: var(--header-element-right);
+}
+
+.header__element::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 100%;
+  box-shadow: 0 0 3px 3px var(--accent-color);
+  top: var(--header-element-top-2);
+  right: var(--header-element-right-2);
+}
+
+.decorated-element::before {
+  content: "";
+  position: absolute;
+  inline-size: var(--decoration-size);
+  block-size: var(--decoration-size);
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  background-color: transparent;
+  top: var(--decoration-position);
+  right: var(--decoration-position);
+}
+
+.decorated-element::after {
+  content: "";
+  position: absolute;
+  inline-size: var(--decoration-size);
+  block-size: var(--decoration-size);
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  background-color: transparent;
+  bottom: var(--decoration-position);
+  left: var(--decoration-position);
+}
+
+.main__block {
+  display: grid;
+  padding-inline: var(--padding-standard);
+  margin-block-end: 50px;
+}
+
+.main__block:last-child {
+  margin-block-end: 40px;
+}
+
+.main__title {
+  color: var(--accent-color);
+  font-size: var(--font-size-normal);
+  margin-block-end: 20px;
+  line-height: var(--line-height);
+}
+
+.title-decor, .main__list .main__title {
+  background-color: var(--accent-title-color);
+  color: var(--main-color);
+  font-size: var(--font-size-normal);
+  margin-block-end: var(--padding-standard);
+  line-height: var(--line-height);
+}
+
+.main__description {
+  color: var(--main-text-color);
+  font-size: var(--font-size-normal);
+  line-height: var(--line-height);
+}
+
+.main__description:not(:last-child), .main__reason:not(:last-child), .main__list-card:not(:last-child), .main__chapter-advices .title-decor {
+  margin-block-end: var(--padding-standard-x2);
+}
+
+.main__list .main__title {
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height);
+}
+
+a {
+  text-decoration: none;
+  text-shadow: 1.5px 1.5px 0 var(--accent-title-color);
+  transition: all 0.3s ease-in;
+}
+
+a:hover {
+  border-bottom: 1px solid var(--main-text-color);
+}
+
+a:focus {
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 1px solid var(--main-text-color);
+}
+
+.main__chapter-advices > .main__title {
+  margin-block-end: var(--padding-standard-x2);
+  line-height: var(--line-height);
+}
+
+.main__pictures {
+  display: grid;
+  gap: var(--padding-standard);
+}
+
+img {
+  inline-size: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  block-size: max(100vh, 668px);
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 2px 2px 0 var(--accent-title-color);
+  color: var(--title-color);
 }
