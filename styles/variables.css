@@ -20,3 +20,13 @@
   --padding-standard: 10px;
   --padding-standard-x2: 20px;
 }
+
+@media (width >= 768px) {
+  :root {
+    --angle-decoration-position: 20px;
+    --header-element-top: 22px;
+    --header-element-right: 48px;
+    --header-element-top-2: 28px;
+    --header-element-right-2: 29px;
+  }
+}
