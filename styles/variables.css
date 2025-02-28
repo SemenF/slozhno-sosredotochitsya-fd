@@ -15,18 +15,18 @@
   --decoration-size: 25px;
   --header-element-top: 12px;
   --header-element-right: 38px;
-  --header-element-top-2: 18px;
-  --header-element-right-2: 19px;
+  --header-element-top-other: 18px;
+  --header-element-right-other: 19px;
   --padding-standard: 10px;
-  --padding-standard-x2: 20px;
+  --padding-standard-xtwo: 20px;
 }
 
 @media (width >= 768px) {
   :root {
-    --angle-decoration-position: 20px;
+    --decoration-position: 20px;
     --header-element-top: 22px;
     --header-element-right: 48px;
-    --header-element-top-2: 28px;
-    --header-element-right-2: 29px;
+    --header-element-top-other: 28px;
+    --header-element-right-other: 29px;
   }
 }

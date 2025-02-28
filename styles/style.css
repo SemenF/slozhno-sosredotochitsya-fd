@@ -102,8 +102,8 @@
   block-size: 9px;
   border-radius: 100%;
   box-shadow: 0 0 3px 3px var(--accent-color);
-  top: var(--header-element-top-2);
-  right: var(--header-element-right-2);
+  top: var(--header-element-top-other);
+  right: var(--header-element-right-other);
 }
 
 .decorated-element::before {
@@ -166,7 +166,7 @@
 .main__reason:not(:last-child),
 .main__list-card:not(:last-child),
 .main__chapter-advices .title-decor {
-  margin-block-end: var(--padding-standard-x2);
+  margin-block-end: var(--padding-standard-xtwo);
 }
 
 .main__list .main__title {
@@ -193,7 +193,7 @@ a:focus-visible {
 }
 
 .main__chapter-advices > .main__title {
-  margin-block-end: var(--padding-standard-x2);
+  margin-block-end: var(--padding-standard-xtwo);
   line-height: var(--line-height);
 }
 
@@ -239,12 +239,12 @@ img {
   }
 
   .main__block {
-    padding-inline: var(--padding-standard-x2);
+    padding-inline: var(--padding-standard-xtwo);
     margin-block-end: 80px;
   }
 
   .main__title {
-    margin-block-end: var(--padding-standard-x2);
+    margin-block-end: var(--padding-standard-xtwo);
   }
 
   .title-decor {
@@ -252,13 +252,13 @@ img {
   }
 
   .main__pictures-decor {
-    margin-block-end: var(--padding-standard-x2);
+    margin-block-end: var(--padding-standard-xtwo);
   }
 
   .main__chapter-why {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: var(--padding-standard-x2);
+    column-gap: var(--padding-standard-xtwo);
   }
 
   .main__chapter-why .main__title {
@@ -278,7 +278,7 @@ img {
   .main__chapter-advices {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    column-gap: var(--padding-standard-x2);
+    column-gap: var(--padding-standard-xtwo);
   }
 
   .main__chapter-advices + .main__title {
@@ -295,7 +295,7 @@ img {
   .main__pictures {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: var(--padding-standard-x2);
+    gap: var(--padding-standard-xtwo);
     grid-auto-flow: dense;
     inline-size: max(728px, 100%);
   }
@@ -362,7 +362,7 @@ img {
   .main__chapter-what {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: var(--padding-standard-x2);
+    column-gap: var(--padding-standard-xtwo);
   }
   .main__chapter-what .main__title {
     grid-row: 1;
